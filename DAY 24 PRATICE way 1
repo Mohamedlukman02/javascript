@@ -1,0 +1,36 @@
+//1. Add a button click event//
+
+<HTML>
+
+<button id="myBtn">Click Me</button>
+
+<script>
+document.getElementById("myBtn").onclick = function() {
+  alert("Button clicked!");
+};
+</script>
+
+//2.Show input value while typing
+
+<HTML>
+
+<input type="text" id="myInput" placeholder="Type something">
+<p id="output"></p>
+
+<script>
+document.getElementById("myInput").addEventListener("input", function() {
+  document.getElementById("output").innerText = this.value;
+});
+</script>
+
+//3. Add event listener to a button (recommended method)//
+
+<HTML>
+
+<button id="btn">Click Me</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+  console.log("Button clicked using event listener");
+});
+</script>
