@@ -1,0 +1,26 @@
+
+////Add a button click event.
+Show input value when typing.
+Add event listener to a button.////
+
+
+
+<input type="text" id="inputBox" placeholder="Type here">
+<button id="showBtn">Show Value</button>
+<p id="result"></p>
+
+<script>
+const input = document.getElementById("inputBox");
+const button = document.getElementById("showBtn");
+const result = document.getElementById("result");
+
+// Show while typing
+input.addEventListener("input", function() {
+  result.innerText = this.value;
+});
+
+// Button click
+button.addEventListener("click", function() {
+  alert("You entered: " + input.value);
+});
+</script>
