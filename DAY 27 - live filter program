@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filter Names</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input {
+      padding: 8px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+    li {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Filter Names</h2>
+
+  <!-- Textbox -->
+  <input type="text" id="searchBox" placeholder="Type a name...">
+
+  <!-- List -->
+  <ul id="nameList"></ul>
+
+  <script>
+    const names = ["Lukman", "Arun", "Kumar", "Rahul", "Anjali", "Divya"];
+
+    const list = document.getElementById("nameList");
+    const input = document.getElementById("searchBox");
+
+    // function to display names
+    function displayNames(filteredNames) {
+      list.innerHTML = "";
+
+      filteredNames.forEach(name => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        list.appendChild(li);
+      });
+    }
+
+    // initial display
+    displayNames(names);
+
+    // filter on typing
+    input.addEventListener("input", function() {
+      const searchText = input.value.toLowerCase();
+
+      const filtered = names.filter(name =>
+        name.toLowerCase().includes(searchText)
+      );
+
+      displayNames(filtered);
+    });
+  </script>
+
+</body>
+</html>
