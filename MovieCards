@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Cards</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      width: 180px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Movie List</h2>
+
+  <div class="container" id="movieContainer"></div>
+
+  <script>
+    const movies = [
+  {
+    name: "Leo",
+    image:  "./Leo.jpeg"
+  },
+  {
+    name: "Jailer",
+    image: "./Jailer.jpeg"
+  },
+  {
+    name: "Vikram",
+    image: "./Vikram.jpeg"
+  },
+  {
+    name: "Master",
+    image: "mastar.jpeg"
+  }
+];
+    const container = document.getElementById("movieContainer");
+
+    movies.forEach(movie => {
+      // create card
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      // create image
+      const img = document.createElement("img");
+      img.src = movie.image;
+
+      // create title
+      const title = document.createElement("h3");
+      title.textContent = movie.name;
+
+      // append elements
+      card.appendChild(img);
+      card.appendChild(title);
+
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
