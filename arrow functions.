@@ -1,0 +1,18 @@
+// Add two numbers
+const add = (a, b) => a + b;
+
+// Square a number
+const square = x => x * x;
+
+// Check even number
+const isEven = n => n % 2 === 0;
+
+// Return object (wrap in parentheses)
+const createUser = (name, age) => ({ name, age });
+
+// No arguments
+const greet = () => "Hello!";
+
+// Array mapping
+const nums = [1, 2, 3];
+const doubled = nums.map(n => n * 2);
