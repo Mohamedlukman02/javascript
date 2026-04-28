@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Shopping Cart</title>
+</head>
+<body>
+
+  <h2>🛒 Online Store</h2>
+
+  <!-- Cart Count -->
+  <h3>Cart Items: <span id="cart-count">0</span></h3>
+
+  <!-- Product List -->
+  <div id="products"></div>
+
+  <script>
+    // Product Data
+    const products = [
+      { id: 1, name: "Shirt" },
+      { id: 2, name: "Shoes" },
+      { id: 3, name: "Watch" }
+    ];
+
+    // Cart
+    let cart = [];
+
+    // Display Products
+    const productDiv = document.getElementById("products");
+
+    products.forEach(product => {
+      const div = document.createElement("div");
+
+      div.innerHTML = `
+        <p>${product.name}</p>
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
+      `;
+
+      productDiv.appendChild(div);
+    });
+
+    // Add to Cart Function
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      cart.push(product);
+
+      // Update Count
+      document.getElementById("cart-count").innerText = cart.length;
+    }
+  </script>
+
+</body>
+</html>
