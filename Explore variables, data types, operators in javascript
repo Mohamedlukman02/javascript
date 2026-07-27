@@ -1,0 +1,27 @@
+// Declare Variables(var, let, const)
+var name = "afrin";  // can be re-declared & updated
+let a = 10;      // can be updated (not re-declared)
+const country = "India"; // cannot be changed
+
+// Different DataTypes:
+let str = "hello";
+let age = 10;
+let isStudent = true;
+let emptyValue = null;
+let unassigned;
+
+// Operators
+let a = 10;
+let b = 5;
+// Arithmetic
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+// Comparison
+console.log(a == 10);
+console.log(a === 10);
+// Logical
+console.log(a > 5 && b < 10);
+console.log(a < 5 || b < 10);
