@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boat Route</title>
+</head>
+<body>
+
+    <h2>Ask Route</h2>
+
+    <!-- Buttons -->
+
+
+    <button onclick="showJackRoute()">Ask Jack</button>
+    <button onclick="showAliceRoute()">Ask Alice</button>
+
+    <!-- Output -->
+
+
+    <p id="routeOutput"></p>
+
+    <script>
+        function showJackRoute() {
+            document.getElementById("routeOutput").innerHTML =
+                "Jack says: Take the north route across the island.";
+        }
+
+        function showAliceRoute() {
+            document.getElementById("routeOutput").innerHTML =
+                "Alice says: Go through the east channel for a safer path.";
+        }
+    </script>
+
+</body>
+</html>
